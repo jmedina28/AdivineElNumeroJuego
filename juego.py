@@ -38,9 +38,9 @@ if eleccionnivel == 1 :
         nintentos += 1
 
         if intento < numero :
-            print("Te has quedado por debajo del número generado.")
+            print("Te has quedado por debajo del número generado. \n ")
         if intento > numero :
-            print("Te has quedado por encima del número generado.")
+            print("Te has quedado por encima del número generado. \n ")
         if intento == numero :
             break
     
@@ -48,3 +48,25 @@ if eleccionnivel == 1 :
         print("Has logrado acertar el número con " + str(nintentos) + " intentos.")
     if intento != numero :
         print("Lo sentimos, no has logrado acertar el número en los 20 intentos que tenías.")
+
+if eleccionnivel == 2 :
+    nintentos = 0
+    numero = random.randint(0,1000)
+    print("A continuación se le va a pedir que adivine un número generado del 0 al 1000.")
+#Este while nos limita a tener un número máximo de intentos, en este caso 50.
+    while nintentos < 50 :
+        print("Intente adivinar el número: ")
+        intento = int(input())
+        nintentos += 1
+
+        if intento < numero :
+            print("Te has quedado por debajo del número generado. \n ")
+        if intento > numero :
+            print("Te has quedado por encima del número generado. \n ")
+        if intento == numero :
+            break
+    
+    if intento == numero :
+        print("Has logrado acertar el número con " + str(nintentos) + " intentos.")
+    if intento != numero :
+        print("Lo sentimos, no has logrado acertar el número en los 50 intentos que tenías.")
