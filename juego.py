@@ -15,7 +15,7 @@ def elegirnivel():
     nivelelegido = int(input("¿En qué nivel de dificultad desea jugar?: "))
     global eleccionnivel
     eleccionnivel = nivelelegido
-    if 0 <= eleccionnivel <= 4 :
+    if 0 < eleccionnivel <= 4 :
         if eleccionnivel == 1 :
             print("Usted ha seleccionado el nivel de dificultad simple.")
         if eleccionnivel == 2 :
