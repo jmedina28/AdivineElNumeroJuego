@@ -30,7 +30,7 @@ elegirnivel()
 if eleccionnivel == 1 :
     nintentos = 0
     numero = random.randint(0,100)
-    print("A continuación se le va a pedir que adivine un número generado del 0 al 100.")
+    print(" \nA continuación se le va a pedir que adivine un número generado del 0 al 100.")
 #Este while nos limita a tener un número máximo de intentos, en este caso 20.
     while nintentos < 20 :
         print("Intente adivinar el número: ")
@@ -52,7 +52,7 @@ if eleccionnivel == 1 :
 if eleccionnivel == 2 :
     nintentos = 0
     numero = random.randint(0,1000)
-    print("A continuación se le va a pedir que adivine un número generado del 0 al 1000.")
+    print(" \nA continuación se le va a pedir que adivine un número generado del 0 al 1000.")
 #Este while nos limita a tener un número máximo de intentos, en este caso 50.
     while nintentos < 50 :
         print("Intente adivinar el número: ")
@@ -74,7 +74,7 @@ if eleccionnivel == 2 :
 if eleccionnivel == 3 :
     nintentos = 0
     numero = random.randint(0,1000000)
-    print("A continuación se le va a pedir que adivine un número generado del 0 al 1000000.")
+    print(" \nA continuación se le va a pedir que adivine un número generado del 0 al 1000000.")
 #Este while nos limita a tener un número máximo de intentos, en este caso 100.
     while nintentos < 100 :
         print("Intente adivinar el número: ")
@@ -92,3 +92,25 @@ if eleccionnivel == 3 :
         print("Has logrado acertar el número con " + str(nintentos) + " intentos.")
     if intento != numero :
         print("Lo sentimos, no has logrado acertar el número en los 1000000 intentos que tenías.")
+
+if eleccionnivel == 4 :
+    nintentos = 0
+    numero = random.randint(0,1000000000000)
+    print(" \nA continuación se le va a pedir que adivine un número generado del 0 al 1000000000000.")
+#Este while nos limita a tener un número máximo de intentos, en este caso 500.
+    while nintentos < 500 :
+        print("Intente adivinar el número: ")
+        intento = int(input())
+        nintentos += 1
+
+        if intento < numero :
+            print("Te has quedado por debajo del número generado.")
+        if intento > numero :
+            print("Te has quedado por encima del número generado.")
+        if intento == numero :
+            break
+    
+    if intento == numero :
+        print("Has logrado acertar el número con " + str(nintentos) + " intentos.")
+    if intento != numero :
+        print("Lo sentimos, no has logrado acertar el número en los 500 intentos que tenías.")
