@@ -16,6 +16,13 @@ def elegirnivel():
     global eleccionnivel
     eleccionnivel = nivelelegido
     if eleccionnivel == 1 :
-        print("Usted ha seleccionado el nivel de dificultad simple")
+        print("Usted ha seleccionado el nivel de dificultad simple.")
+    if eleccionnivel == 2 :
+        print("Usted ha seleccionado el nivel de dificultad intermedio.")
+    if eleccionnivel == 3 :
+        print("Usted ha seleccionado el nivel de dificultad avanzado.")
+    if eleccionnivel == 4 :
+        print("Usted ha seleccionado el nivel de dificultad experto.")
 
 elegirnivel()
+
