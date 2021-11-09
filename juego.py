@@ -26,3 +26,25 @@ def elegirnivel():
 
 elegirnivel()
 
+#Ahora vamos a trabajar el nivel simple y en base a eso realizamos el resto de dificultades.
+if eleccionnivel == 1 :
+    nintentos = 0
+    numero = random.randint(0,100)
+    print("A continuación se le va a pedir que adivine un número generado del 0 al 100.")
+
+    while nintentos < 20 :
+        print("Intente adivinar el número: ")
+        intento = int(input())
+        nintentos += 1
+
+        if intento < numero :
+            print("Te has quedado por debajo del número generado.")
+        if intento > numero :
+            print("Te has quedado por encima del número generado.")
+        if intento == numero :
+            break
+    
+    if intento == numero :
+        print("Has logrado acertar el número con " + str(nintentos) + " intentos.")
+    if intento != numero :
+        print("Lo sentimos, no has logrado acertar el número en los 20 intentos que tenías.")
