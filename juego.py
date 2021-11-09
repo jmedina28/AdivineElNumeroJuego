@@ -1,17 +1,17 @@
 #Voy a volver a hacer el código sobre la marcha
-#con otro enfoque para que sea más facil introducir los nuevos cambios
+#con otro enfoque para que sea más facil introducir los nuevos cambios.
 
-#importamos la librería que necesitamos
+#Importamos la librería que necesitamos.
 import random
 
-#creamos una función 
-#para elegir el nivel en el futuro una vez vayamos a jugar
+#Creamos una función 
+#para elegir el nivel en el futuro una vez vayamos a jugar.
 def elegirnivel():
-    print("Seleccione un nivel de dificultad: ")
+    print("Seleccione un nivel de dificultad: \n ")
     print("1 = Simple")
     print("2 = Intermedio")
     print("3 = Avanzado")
-    print("4 = Experto")
+    print("4 = Experto \n ")
     nivelelegido = int(input("¿En qué nivel de dificultad desea jugar?: "))
     global eleccionnivel
     eleccionnivel = nivelelegido
@@ -31,7 +31,7 @@ if eleccionnivel == 1 :
     nintentos = 0
     numero = random.randint(0,100)
     print("A continuación se le va a pedir que adivine un número generado del 0 al 100.")
-
+#Este while nos limita a tener un número máximo de intentos, en este caso 20.
     while nintentos < 20 :
         print("Intente adivinar el número: ")
         intento = int(input())
