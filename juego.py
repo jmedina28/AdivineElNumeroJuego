@@ -88,7 +88,6 @@ def juego():
         if numero == numeroIA:
             print("Has logrado acertar el número con " + str(nintentos) + " intentos.")
 
-    
 elegirnivel()
 
 if eleccionnivel == 1 :
