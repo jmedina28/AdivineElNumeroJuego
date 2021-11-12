@@ -4,7 +4,7 @@
 #Importamos la librería que necesitamos.
 import random
 import tabulate
-from tabulate import tabulate
+from tabulate import TableFormat, tabulate
 #Creamos una función 
 #para elegir el nivel en el futuro una vez vayamos a jugar.
 def elegirnivel():
@@ -122,6 +122,8 @@ if eleccionnivel == 4 :
         print("Has logrado acertar el número con " + str(nintentos) + " intentos.")
     if intento != numero :
         print("Lo sentimos, no has logrado acertar el número en los 500 intentos que tenías.")
+
 puntuacion = maxintentos - nintentos
 nombre = str(input("Introduzca su nombre: "))
 tabla = [["Nombre", "Nivel de dificultad", "Puntuación"], [nombre, eleccionnivel, puntuacion]]
+print(tabulate(tabla, headers="firstrow", tablefmt="grid"))
