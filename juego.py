@@ -9,9 +9,9 @@ from tabulate import TableFormat, tabulate
 #para elegir el nivel en el futuro una vez vayamos a jugar.
 def elegirnivel():
     print("Seleccione un nivel de dificultad: \n ")
-    print("1 = Simple")
-    print("2 = Intermedio")
-    print("3 = Avanzado")
+    print("1 = Simple \n ")
+    print("2 = Intermedio \n ")
+    print("3 = Avanzado \n ")
     print("4 = Experto \n ")
     nivelelegido = int(input("¿En qué nivel de dificultad desea jugar?: "))
     global eleccionnivel
@@ -29,29 +29,44 @@ def elegirnivel():
         print(" \nSeleccione uno de los niveles de dificultad establecidos (del 1 al 4)")
 #Desarrollo en una sola función todo el juego y luego ya dependiendo del nivel de dificultad seleccionado establecemos nuestras condiciones
 def juego():
-    nintentos = 0
-    while nintentos < maxintentos :
-        print("Intente adivinar el número: ")
-        intento = int(input())
-        nintentos += 1
+    print("Seleccione un modo: ")
+    print("1 = Usuario \n ")
+    print("2 = IA \n ")   
+    modoelegido = int(input("¿En qué modo desea jugar?: "))
+    eleccionmodo = modoelegido
+    if 0 < eleccionmodo <= 4 :
+        if eleccionmodo == 1 :
+            print("Usted ha seleccionado el modo USUARIO.")
+        if eleccionmodo == 2 :
+            print("Usted ha seleccionado el modo IA.")
+        
+    else:
+        print(" \nSeleccione uno de los modos establecidos (del 1 al 2)")
 
-        if intento < numero :
-            print("Te has quedado por debajo del número generado. \n ")
-        if intento > numero :
-            print("Te has quedado por encima del número generado. \n ")
+    if eleccionmodo == 1:
+        nintentos = 0
+        while nintentos < maxintentos :
+            print("Intente adivinar el número: ")
+            intento = int(input())
+            nintentos += 1
+
+            if intento < numero :
+                print("Te has quedado por debajo del número generado. \n ")
+            if intento > numero :
+                print("Te has quedado por encima del número generado. \n ")
+            if intento == numero :
+                break       
+    
         if intento == numero :
-            break       
-    
-    if intento == numero :
-        print("Has logrado acertar el número con " + str(nintentos) + " intentos.")
-        puntuacion = maxintentos - nintentos
-        nombre = str(input("Introduzca su nombre: "))
-        tabla = [[" Nombre", "Nivel de dificultad ", "Puntuación "], [nombre, eleccionnivel, puntuacion]]
-        print(tabulate(tabla, headers="firstrow", tablefmt="grid"))
-    if intento != numero :
-        print("Lo sentimos, no has logrado acertar el número en los " + str(maxintentos) + " intentos que tenías.")
-    
+            print("Has logrado acertar el número con " + str(nintentos) + " intentos.")
+            puntuacion = maxintentos - nintentos
+            nombre = str(input("Introduzca su nombre: "))
+            tabla = [[" Nombre", "Nivel de dificultad ", "Puntuación "], [nombre, eleccionnivel, puntuacion]]
+            print(tabulate(tabla, headers="firstrow", tablefmt="grid"))
+        if intento != numero :
+            print("Lo sentimos, no has logrado acertar el número en los " + str(maxintentos) + " intentos que tenías.")
 
+    
 elegirnivel()
 
 if eleccionnivel == 1 :
