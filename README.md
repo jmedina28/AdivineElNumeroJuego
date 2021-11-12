@@ -9,7 +9,8 @@ El diagrama de flujo que he realizado para este código es el siguiente:
 
 El código empleado para resolverlo es el siguiente:
 
-'''#Importamos la librería que necesitamos.
+'''
+#Importamos la librería que necesitamos.
 import random
 import tabulate
 from tabulate import TableFormat, tabulate
