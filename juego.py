@@ -27,7 +27,7 @@ def elegirnivel():
             print("Usted ha seleccionado el nivel de dificultad experto.")
     else:
         print(" \nSeleccione uno de los niveles de dificultad establecidos (del 1 al 4)")
-
+#Desarrollo en una sola función todo el juego y luego ya dependiendo del nivel de dificultad seleccionado establecemos nuestras condiciones
 def juego():
     nintentos = 0
     while nintentos < maxintentos :
@@ -40,10 +40,14 @@ def juego():
         if intento > numero :
             print("Te has quedado por encima del número generado. \n ")
         if intento == numero :
-            break
+            break       
     
     if intento == numero :
         print("Has logrado acertar el número con " + str(nintentos) + " intentos.")
+        puntuacion = maxintentos - nintentos
+        nombre = str(input("Introduzca su nombre: "))
+        tabla = [[" Nombre", "Nivel de dificultad ", "Puntuación "], [nombre, eleccionnivel, puntuacion]]
+        print(tabulate(tabla, headers="firstrow", tablefmt="grid"))
     if intento != numero :
         print("Lo sentimos, no has logrado acertar el número en los " + str(maxintentos) + " intentos que tenías.")
     
@@ -77,8 +81,3 @@ if eleccionnivel == 4 :
     numero = random.randint(0,1000000000000)
     print(" \nA continuación se le va a pedir que adivine un número generado del 0 al 1000000000000.")
     juego()
-
-puntuacion = maxintentos - nintentos
-nombre = str(input("Introduzca su nombre: "))
-tabla = [[" Nombre", "Nivel de dificultad ", "Puntuación "], [nombre, eleccionnivel, puntuacion]]
-print(tabulate(tabla, headers="firstrow", tablefmt="grid"))
