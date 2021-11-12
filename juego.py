@@ -66,33 +66,63 @@ def juego():
         if intento != numero :
             print("Lo sentimos, no has logrado acertar el número en los " + str(maxintentos) + " intentos que tenías.")
 
+    if eleccionmodo == 2:
+
+        numeroIA= random.randint(min, max)
+        print(numeroIA)
+        nintentos = 1
+        while numeroIA != numero and nintentos < maxintentos : 
+        
+            if numero < numeroIA:
+                print("Te has quedado por encima del número generado. \n ")
+                numeroIA= random.randint (numero,(numeroIA - 1)) 
+                print(numeroIA)
+                nintentos += 1
+            elif numero > numeroIA:
+                print("Te has quedado por debajo del número generado. \n ")
+                numeroIA= random.randint ((numeroIA + 1),numero) 
+                print(numeroIA)
+                nintentos += 1
+        if nintentos >= maxintentos:
+            print("Lo sentimos, no has logrado acertar el número en los " + str(maxintentos) + " intentos que tenías.")
+        if numero == numeroIA:
+            print("Has logrado acertar el número con " + str(nintentos) + " intentos.")
+
     
 elegirnivel()
 
 if eleccionnivel == 1 :
     maxintentos = 20
     nintentos = 0
-    numero = random.randint(0,100)
+    min = 0
+    max = 100
+    numero = random.randint(min, max)
     print(" \nA continuación se le va a pedir que adivine un número generado del 0 al 100.")
     juego()
 
 if eleccionnivel == 2 :
     maxintentos = 50
     nintentos = 0
-    numero = random.randint(0,1000)
+    min = 0
+    max = 1000
+    numero = random.randint(min, max)
     print(" \nA continuación se le va a pedir que adivine un número generado del 0 al 1000.")
     juego()
 
 if eleccionnivel == 3 :
     maxintentos = 100
     nintentos = 0
-    numero = random.randint(0,1000000)
+    min = 0
+    max = 1000000
+    numero = random.randint(min, max)
     print(" \nA continuación se le va a pedir que adivine un número generado del 0 al 1000000.")
     juego()
 
 if eleccionnivel == 4 :
     maxintentos = 500
     nintentos = 0
-    numero = random.randint(0,1000000000000)
+    min = 0
+    max = 1000000000000
+    numero = random.randint(min, max)
     print(" \nA continuación se le va a pedir que adivine un número generado del 0 al 1000000000000.")
     juego()
