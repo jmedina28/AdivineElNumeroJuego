@@ -1,11 +1,19 @@
-# AdivineElNumeroJuego
-Mi dirección de Github es la siguiente: [GitHub](https://github.com/jmedina28/AdivineElNumeroJuego)
+## Juego: Adivine el número
+Mi dirección de Github es la siguiente: [JMedina28](https://github.com/jmedina28)
+
+La dirección correspondiente a este repositorio es la siguiente: [Repositorio](https://github.com/jmedina28/AdivineElNumeroJuego)
 
 He resuelto el juego de adivinar valores enteros en función del nivel de dificultad que decidas y en cada caso puedes elegir entre modo IA y modo USUARIO, en caso de haber elegido el modo USUARIO al finalizar se desplegará una tabla final con la puntuación correspondiente en función del número de intentos que hayas empleado.
 
 El diagrama de flujo que he realizado para este código es el siguiente:
 
 
+<br>
+<img height="800" src="https://github.com/jmedina28/AdivineElNumeroJuego/blob/main/DiagramadeFlujoJuego.drawio.png" />
+<br>
+
+Si necesitas verlo mejor entra en el siguiente enlace:
+[Diagrama de flujo](https://github.com/jmedina28/AdivineElNumeroJuego/blob/main/DiagramadeFlujoJuego.drawio.png)
 
 El código empleado para resolverlo es el siguiente:
 ```
