@@ -8,8 +8,7 @@ El diagrama de flujo que he realizado para este código es el siguiente:
 
 
 El código empleado para resolverlo es el siguiente:
-
-'''
+```
 #Importamos la librería que necesitamos.
 import random
 import tabulate
@@ -135,3 +134,4 @@ if eleccionnivel == 4 :
     numero = random.randint(min, max)
     print(" \nA continuación se le va a pedir que adivine un número generado del 0 al 1000000000000.")
     juego()
+
