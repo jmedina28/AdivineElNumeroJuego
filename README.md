@@ -1,5 +1,5 @@
 # AdivineElNumeroJuego
-Mi dirección de Github es la siguiente: (https://github.com/jmedina28/AdivineElNumeroJuego)
+Mi dirección de Github es la siguiente: [GitHub](https://github.com/jmedina28/AdivineElNumeroJuego)
 
 He resuelto el juego de adivinar valores enteros en función del nivel de dificultad que decidas y en cada caso puedes elegir entre modo IA y modo USUARIO, en caso de haber elegido el modo USUARIO al finalizar se desplegará una tabla final con la puntuación correspondiente en función del número de intentos que hayas empleado.
 
