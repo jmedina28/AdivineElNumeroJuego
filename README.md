@@ -9,11 +9,11 @@ El diagrama de flujo que he realizado para este código es el siguiente:
 
 
 <br>
-<img height="800" src="https://github.com/jmedina28/AdivineElNumeroJuego/blob/main/DiagramadeFlujoJuego.drawio.png" />
+<img height="800" src="https://github.com/jmedina28/AdivineElNumeroJuego/blob/da9589481e2a1d4ad237dbfc097eb8b0dd20b2c5/DiagramadeFlujoJuego.jpg" />
 <br>
 
 Si necesitas verlo mejor entra en el siguiente enlace:
-[Diagrama de flujo](https://github.com/jmedina28/AdivineElNumeroJuego/blob/main/DiagramadeFlujoJuego.drawio.png)
+[Diagrama de flujo](https://github.com/jmedina28/AdivineElNumeroJuego/blob/da9589481e2a1d4ad237dbfc097eb8b0dd20b2c5/DiagramadeFlujoJuego.jpg)
 
 El código empleado para resolverlo es el siguiente:
 ```
