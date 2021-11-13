@@ -51,9 +51,11 @@ def juego():
             nintentos += 1
 
             if intento < numero :
-                print("Te has quedado por debajo del número generado. \n ")
+                print("\nTe has quedado por debajo del número generado. ")
+                print("Te quedan " + str(maxintentos-nintentos) + " intentos.\n")
             if intento > numero :
-                print("Te has quedado por encima del número generado. \n ")
+                print("\nTe has quedado por encima del número generado. ")
+                print("Te quedan " + str(maxintentos-nintentos) + " intentos.\n")
             if intento == numero :
                 break       
     
@@ -77,12 +79,14 @@ def juego():
             print("La IA ha probado el número "+ str(intento) + " y ")
             if intento > numero :
                 print("se ha quedado por encima del número generado.\n")
+                print("Le quedan " + str(maxintentos-nintentos) + " intentos.\n")
                 maxIA = intento
             elif intento < numero :
                 print("se ha quedado por debajo del número generado.\n")
+                print("Le quedan " + str(maxintentos-nintentos) + " intentos.\n")
                 minIA = intento + 1
         print("es el correcto.")
-        print("\nLe ha costado " + str(nintentos) + " intentos.")
+        print("\nLe ha costado " + str(nintentos) + " intentos y por tanto le han sobrado " + str(maxintentos-nintentos) + " intentos.")
 
 elegirnivel()
 
