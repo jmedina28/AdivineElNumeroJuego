@@ -46,7 +46,7 @@ def juego():
     if eleccionmodo == 1:
         nintentos = 0
         while nintentos < maxintentos :
-            print("Intente adivinar el número: ")
+            print("\nIntente adivinar el número: ")
             intento = int(input())
             nintentos += 1
 
@@ -60,33 +60,29 @@ def juego():
         if intento == numero :
             print("Has logrado acertar el número con " + str(nintentos) + " intentos.")
             puntuacion = maxintentos - nintentos
-            nombre = str(input("Introduzca su nombre: "))
+            nombre = str(input("\nIntroduzca su nombre: "))
             tabla = [[" Nombre", "Nivel de dificultad ", "Puntuación "], [nombre, eleccionnivel, puntuacion]]
             print(tabulate(tabla, headers="firstrow", tablefmt="grid"))
         if intento != numero :
             print("Lo sentimos, no has logrado acertar el número en los " + str(maxintentos) + " intentos que tenías.")
 
     if eleccionmodo == 2:
-
-        numeroIA= random.randint(min, max)
-        print(numeroIA)
-        nintentos = 1
-        while numeroIA != numero and nintentos < maxintentos : 
-        
-            if numero < numeroIA:
-                print("Te has quedado por encima del número generado. \n ")
-                numeroIA= random.randint (numero,(numeroIA - 1)) 
-                print(numeroIA)
-                nintentos += 1
-            elif numero > numeroIA:
-                print("Te has quedado por debajo del número generado. \n ")
-                numeroIA= random.randint ((numeroIA + 1),numero) 
-                print(numeroIA)
-                nintentos += 1
-        if nintentos >= maxintentos:
-            print("Lo sentimos, no has logrado acertar el número en los " + str(maxintentos) + " intentos que tenías.")
-        if numero == numeroIA:
-            print("Has logrado acertar el número con " + str(nintentos) + " intentos.")
+        nintentos = 0
+        minIA = min
+        maxIA = max
+        intento = (minIA+maxIA)//2
+        while intento != numero and nintentos < maxintentos :
+            intento = (minIA+maxIA)//2
+            nintentos += 1
+            print("La IA ha probado el número "+ str(intento) + " y ")
+            if intento > numero :
+                print("se ha quedado por encima del número generado.\n")
+                maxIA = intento
+            elif intento < numero :
+                print("se ha quedado por debajo del número generado.\n")
+                minIA = intento + 1
+    print("es el correcto.")
+    print("\nLe ha costado " + str(nintentos) + " intentos.")
 
 elegirnivel()
 
@@ -96,7 +92,7 @@ if eleccionnivel == 1 :
     min = 0
     max = 100
     numero = random.randint(min, max)
-    print(" \nA continuación se le va a pedir que adivine un número generado del 0 al 100.")
+    print(" \nA continuación se le va a pedir que adivine un número generado del 0 al 100.\n ")
     juego()
 
 if eleccionnivel == 2 :
@@ -105,7 +101,7 @@ if eleccionnivel == 2 :
     min = 0
     max = 1000
     numero = random.randint(min, max)
-    print(" \nA continuación se le va a pedir que adivine un número generado del 0 al 1000.")
+    print(" \nA continuación se le va a pedir que adivine un número generado del 0 al 1000.\n")
     juego()
 
 if eleccionnivel == 3 :
@@ -114,7 +110,7 @@ if eleccionnivel == 3 :
     min = 0
     max = 1000000
     numero = random.randint(min, max)
-    print(" \nA continuación se le va a pedir que adivine un número generado del 0 al 1000000.")
+    print(" \nA continuación se le va a pedir que adivine un número generado del 0 al 1000000.\n")
     juego()
 
 if eleccionnivel == 4 :
@@ -123,5 +119,5 @@ if eleccionnivel == 4 :
     min = 0
     max = 1000000000000
     numero = random.randint(min, max)
-    print(" \nA continuación se le va a pedir que adivine un número generado del 0 al 1000000000000.")
+    print(" \nA continuación se le va a pedir que adivine un número generado del 0 al 1000000000000.\n")
     juego()
