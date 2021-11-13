@@ -81,8 +81,8 @@ def juego():
             elif intento < numero :
                 print("se ha quedado por debajo del número generado.\n")
                 minIA = intento + 1
-    print("es el correcto.")
-    print("\nLe ha costado " + str(nintentos) + " intentos.")
+        print("es el correcto.")
+        print("\nLe ha costado " + str(nintentos) + " intentos.")
 
 elegirnivel()
 
