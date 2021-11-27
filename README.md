@@ -16,7 +16,7 @@ Si necesitas verlo mejor entra en el siguiente enlace:
 [Diagrama de flujo](https://github.com/jmedina28/AdivineElNumeroJuego/blob/da9589481e2a1d4ad237dbfc097eb8b0dd20b2c5/DiagramadeFlujoJuego.jpg)
 
 El código empleado para resolverlo es el siguiente:
-```
+```python
 #Importamos la librería que necesitamos.
 import random
 import tabulate
